@@ -34,7 +34,7 @@ export default makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
   },
-  purple: {
+  color: {
     color: theme.palette.getContrastText(deepPurple[500]),
     backgroundColor: deepPurple[500],
   },
@@ -65,7 +65,7 @@ export default makeStyles((theme) => ({
     appBar: {
       padding: "10px 10px",
     },
-    purple: {
+    color: {
       left: "30px",
     },
     logout: {

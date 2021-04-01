@@ -86,7 +86,7 @@ export default function Navbar() {
         <div>
           <MenuItem>
             <Avatar
-              className={classes.purple}
+              className={classes.color}
               alt={user?.result.name}
               src={user?.result.imageUrl}
             >
@@ -145,7 +145,7 @@ export default function Navbar() {
             {user ? (
               <div className={classes.toolbar}>
                 <Avatar
-                  className={classes.purple}
+                  className={classes.color}
                   alt={user?.result.name}
                   src={user?.result.imageUrl}
                 >
