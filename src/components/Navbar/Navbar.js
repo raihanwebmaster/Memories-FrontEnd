@@ -197,6 +197,7 @@ import useStyles from './styles';
 
 const Navbar = () => {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
+  console.log(user);
   const dispatch = useDispatch();
   const location = useLocation();
   const history = useHistory();
@@ -205,7 +206,7 @@ const Navbar = () => {
   const logout = () => {
     dispatch({ type: actionType.LOGOUT });
 
-    history.push('/auth');
+    history.push('/');
 
     setUser(null);
   };
