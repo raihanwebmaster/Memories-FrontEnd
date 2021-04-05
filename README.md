@@ -10,10 +10,11 @@
    * To post memories user have to login first.
    * Also login first if user wants to delete or edit his post.
    * And user can't like any post if he don't logged In.
+
 ## Special-features: 
 + There is multiple way for user login. Google Signin or create account.
 + If user logged in & don't use the site, then it will log out the loggedIn user automatically after 40 minutes.
-+ 
+
 ## Technologry: 
 + Reactjs
 + Style Components
