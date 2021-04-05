@@ -1,5 +1,5 @@
-# React-Todo-List-app
-#### simple react application where user can make his daily task list.
+# Memories-App
+#### An outstanding site where user can post his memory. Go & post your wonderful memory !!!
 
 ## Features:
 + User can post his memory details with image. Like facebook !!!
