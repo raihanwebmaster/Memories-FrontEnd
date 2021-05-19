@@ -9,12 +9,17 @@ export default makeStyles((theme) => ({
     padding: '10px 50px',
   },
   heading: {
-    color: 'rgba(0,183,255, 1)',
+    color: theme.palette.primary.main,
     textDecoration: 'none',
+    fontSize: '2em',
+    fontWeight: 300,
+  },
+  image1: {
+    width: '100',
   },
   image: {
-    marginLeft: '15px',
-    width: '60px',
+    marginLeft: '10px',
+    marginTop: '5px',
   },
   toolbar: {
     display: 'flex',
@@ -29,6 +34,7 @@ export default makeStyles((theme) => ({
   userName: {
     display: 'flex',
     alignItems: 'center',
+    textAlign: 'center',
   },
   brandContainer: {
     display: 'flex',
@@ -54,9 +60,9 @@ export default makeStyles((theme) => ({
     backgroundColor: deepPurple[500],
   },
   [theme.breakpoints.down('sm')]: {
-    image: {
-      marginLeft: '5px',
-      width: '30px',
+    image1: {
+      width: '150px',
+      height: '30px',
     },
     heading: {
       fontSize: '30px',

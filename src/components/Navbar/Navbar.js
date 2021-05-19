@@ -191,7 +191,8 @@ import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import decode from 'jwt-decode';
 
-import memories from '../../images/memories.png';
+import memoriesLogo from '../../images/memories-Logo.png';
+import memoriesText from '../../images/memories-Text.png';
 import * as actionType from '../../constants/actionTypes';
 import useStyles from './styles';
 
@@ -307,18 +308,10 @@ const Navbar = () => {
     <div className={classes.grow}>
        <AppBar className={classes.appBar} position="static" color="inherit">
          <Toolbar>
-           <div className={classes.brandContainer}>
-             <Typography
-               component={Link}
-               to="/"
-               className={classes.heading}
-               variant="h2"
-               align="center"
-             >
-               Memories
-             </Typography>
-             <img className={classes.image} src={memories} alt="icon" />
-           </div>
+           <Link to="/"className={classes.brandContainer}>
+             <img className={classes.image1} src={memoriesText} alt="icon" height="45px" />
+             <img className={classes.image} src={memoriesLogo} alt="icon" height="40px" />
+           </Link>
            <div className={classes.grow} />
            <div className={classes.sectionDesktop}>
              {user ? (
