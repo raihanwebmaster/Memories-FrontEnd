@@ -4,6 +4,7 @@ import {
   Typography,
   CircularProgress,
   Divider,
+  Card,
 } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import moment from "moment";
@@ -20,13 +21,13 @@ const PostDetails = () => {
 
   useEffect(() => {
     dispatch(getPost(id));
-  }, [id]);
+  }, []);
 
   useEffect(() => {
     if(post){
       dispatch(getPostsBySearch({ search: 'none', tags: post?.tags.join(',')}));
     }
-  },  [post]);
+  },[post]);
 
   if(!post) return null;
 
@@ -40,8 +41,9 @@ const PostDetails = () => {
     )
   }
 
-  const recommendedPosts = posts.filter(({ _id }) => _id !== post._id);
+ 
   
+  const recommendedPosts = posts.filter(({ _id }) => _id !== post._id);
 
   return (
     <Paper style={{ padding: "20px", borderRadius: "15px" }} elevation={6}>
@@ -86,23 +88,23 @@ const PostDetails = () => {
           />
         </div>
       </div>
-      {recommendedPosts.length && (
-        <div className={classes.section}>
+      {!!recommendedPosts.length && (
+        <div className={classes.section} >
             <Typography variant="h5" gutterBottom >You might also like :</Typography>
             <Divider/>
-            <div className={classes.recommendedPosts}>
+            <Card  raised elevation={6}  className={classes.recommendedPosts}>
                 {
                   recommendedPosts.map(({title,message, name, likes, selectedFile, _id}) =>(
-                    <div style={{ margin: "20px", cursor: "pointer" }} onClick={() => openPost(_id)} key={_id}>
+                    <div  style={{ margin: "20px", cursor: "pointer" }} onClick={() => openPost(_id)} key={_id}>
                       <Typography variant="h6" gutterBottom>{title}</Typography>
                       <Typography variant="subtitle2" gutterBottom>{name}</Typography>
                       <Typography variant="subtitle2" gutterBottom>{message}</Typography>
                       <Typography variant="subtitle1" gutterBottom>Likes: {likes.length}</Typography>
-                      <img src={selectedFile} alt="cardDetailsPhoto" width="200px" />
+                      <img style={{borderRadius: "7px"}} src={selectedFile || "https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png"} alt="cardDetailsPhoto" width="200px" />
                     </div>
                   ))
                 }
-            </div>
+            </Card>
         </div>
       )}
     </Paper>
