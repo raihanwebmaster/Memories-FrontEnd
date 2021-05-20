@@ -74,14 +74,17 @@ const Form = ({ currentId, setCurrentId }) => {
           {currentId ? `Editing "${post.title}"` : "Creating a Memory"}
         </Typography>
         <TextField
+          required
           name="title"
           variant="outlined"
           label="Title"
           fullWidth
           value={postData.title}
+          required
           onChange={(e) => setPostData({ ...postData, title: e.target.value })}
         />
         <TextField
+          required
           name="message"
           variant="outlined"
           label="Message"

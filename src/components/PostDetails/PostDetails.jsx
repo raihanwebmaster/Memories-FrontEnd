@@ -23,15 +23,15 @@ const PostDetails = () => {
     dispatch(getPost(id));
   }, []);
 
-  useEffect(() => {
-    if(post){
-      dispatch(getPostsBySearch({ search: 'none', tags: post?.tags.join(',')}));
-    }
-  },[post]);
+  // useEffect(() => {
+  //   if(post){
+  //     dispatch(getPostsBySearch({ search: 'none', tags: post?.tags.join(',')}));
+  //   }
+  // },[post]);
 
   if(!post) return null;
 
-  const openPost = (_id) => history.push(`/posts/${_id}`);
+  // const openPost = (_id) => history.push(`/posts/${_id}`);
 
   if(isLoading) {
     return (
@@ -43,7 +43,7 @@ const PostDetails = () => {
 
  
   
-  const recommendedPosts = posts.filter(({ _id }) => _id !== post._id);
+  // const recommendedPosts = posts.filter(({ _id }) => _id !== post._id);
 
   return (
     <Paper style={{ padding: "20px", borderRadius: "15px" }} elevation={6}>
@@ -88,11 +88,11 @@ const PostDetails = () => {
           />
         </div>
       </div>
-      {!!recommendedPosts.length && (
+      {/* {!!recommendedPosts.length && (
         <div className={classes.section} >
             <Typography variant="h5" gutterBottom >You might also like :</Typography>
             <Divider/>
-            <Card  raised elevation={6}  className={classes.recommendedPosts}>
+            <div raised elevation={6}  className={classes.recommendedPosts}>
                 {
                   recommendedPosts.map(({title,message, name, likes, selectedFile, _id}) =>(
                     <div  style={{ margin: "20px", cursor: "pointer" }} onClick={() => openPost(_id)} key={_id}>
@@ -104,9 +104,9 @@ const PostDetails = () => {
                     </div>
                   ))
                 }
-            </Card>
+            </div>
         </div>
-      )}
+      )} */}
     </Paper>
   );
 };
