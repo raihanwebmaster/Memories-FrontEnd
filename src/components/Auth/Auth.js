@@ -53,7 +53,7 @@ const Auth = () => {
     const token = res?.tokenId;
     console.log(res);
     try {
-      dispatch({ type: AUTH, data: { result, token } });
+     dispatch({ type: AUTH, data: { result, token } });
       history.push('/');
     } catch (error) {
       console.log(error);

@@ -11,7 +11,7 @@ const Form = ({ currentId, setCurrentId }) => {
     title: "",
     message: "",
     tags: [],
-    selectedFile: "",
+    selectedFile: '',
   });
   const post = useSelector((state) =>
     currentId ? state.posts.posts.find((message) => message._id === currentId) : null
@@ -111,8 +111,8 @@ const Form = ({ currentId, setCurrentId }) => {
           <FileBase
             type="file"
             multiple={false}
-            onDone={({ base64 }) =>
-              setPostData({ ...postData, selectedFile: base64 })
+            onDone={({base64}) =>
+              setPostData({ ...postData, selectedFile: base64})
             }
           />
         </div>
