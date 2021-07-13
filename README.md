@@ -5,7 +5,10 @@
 + User can post his memory details with image. Like facebook !!!
 + User can also edit his memories whenever he want.
 + And also can delete his memories from the site.
-+ One user can like another user's memories & can like his own post.
++ One user can like and comment another user's memories.
++ By Clicking a post anyone can see the post description.
++ below the post details, also show all of the related post that user might like.
++ User can also search any post by  post title or tags.
 + LOGIN...
    * To post memories user have to login first.
    * Also login first if user wants to delete or edit his post.
