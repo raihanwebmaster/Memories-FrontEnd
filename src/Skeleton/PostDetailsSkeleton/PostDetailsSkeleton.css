@@ -134,10 +134,25 @@
     }
 }
 
+@media only screen and (max-width: 1024px) {
+    .thumbnail{
+        margin-right: 45px;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .thumbnail{
+        margin-right: 45px;
+    }
+    .thumbnail-shimmer-wrapper{
+        width: 370px;
+    }
+}
 
 @media only screen and (max-width: 600px) {
     .thumbnail{
         width: 370px;
+        margin-right: 0px;
     }
     .thumbnail-shimmer-wrapper{
         width: 370px;

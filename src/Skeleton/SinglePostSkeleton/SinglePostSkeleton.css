@@ -58,25 +58,35 @@
 }
 @media only screen and (max-width: 600px) {
   .skeleton-wrapper .thumbnail {
-    width: 350px;
-    min-height: 120px;
-    background: #d2dbe2;
-    border-radius: 7px;
+    width: 320px;
   }
   .shimmer-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 400px;
-    height: 100%;
-    overflow: hidden;
+    width: 320px;
   }
   .shimmer {
-    width: 400px;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    animation: loader 2s infinite;
-    box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.2);
+    width: 320px;
   }
   
+}
+@media only screen and (max-width: 380px) {
+  .skeleton-wrapper .thumbnail {
+    width: 280px;
+  }
+  .shimmer-wrapper {
+    width: 280px;
+  }
+  .shimmer {
+    width: 280px;
+  }
+}
+@media only screen and (max-width: 330px) {
+  .skeleton-wrapper .thumbnail {
+    width: 220px;
+  }
+  .shimmer-wrapper {
+    width: 220px;
+  }
+  .shimmer {
+    width: 220px;
+  }
 }

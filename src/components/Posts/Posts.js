@@ -11,6 +11,7 @@ const Posts = ({ setCurrentId }) => {
   const { posts, isLoading } = useSelector((state) => state.posts);
   console.log(isLoading, "load");
   const classes = useStyles();
+
   useEffect(() => {
     setTimeout(() => {
       setTimer(false);
@@ -19,7 +20,7 @@ const Posts = ({ setCurrentId }) => {
 
   if (!posts.length && !isLoading) return "No posts";
   
-  return  (isLoading && timer ) || ( !isLoading && timer) ? (
+  return  (isLoading && timer ) || ( !isLoading === timer) ? (
     <div style={{ display: "flex", flexWrap: "wrap" }}>
       {[1, 2, 3, 4, 5, 6, 7, 8].map((loading) => (
         <div style={{ width: "200px", padding: "10px", marginBottom: "10px" }}>
