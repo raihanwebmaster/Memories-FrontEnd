@@ -37,9 +37,7 @@ const Post = ({ post, setCurrentId }) => {
   };
   const Likes = () => {
     if (likes.length > 0) {
-      return post.likes.find(
-        (like) => like === userId
-      ) ? (
+      return post.likes.find((like) => like === userId) ? (
         <>
           <ThumbUpAltIcon fontSize="small" />
           &nbsp;
@@ -95,7 +93,10 @@ const Post = ({ post, setCurrentId }) => {
           user?.result?._id === post?.creator) && (
           <div className={classes.overlay2} name="edit">
             <Button
-              onClick={(event) => {event.stopPropagation(); setCurrentId(post._id)}}
+              onClick={(event) => {
+                event.stopPropagation();
+                setCurrentId(post._id);
+              }}
               style={{ color: "white" }}
               size="small"
             >
