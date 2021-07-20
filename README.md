@@ -20,8 +20,9 @@
 
 ## Technologry: 
 + Reactjs
-+ Style Components
++ React Redux
 + Material-UI
++ Skeleton js
 + JWT Token
 + Session Storage
 + Firebase ( Hosting )
@@ -32,5 +33,5 @@
 
 [Back-end-Repo](https://github.com/raihanwebmaster/MERN-Project---server)
 
-## Take a look :)
+## Take a look 🎇 :)
 ![alt_text](images/download.png)
